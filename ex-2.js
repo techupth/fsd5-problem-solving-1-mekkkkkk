@@ -2,6 +2,15 @@
 
 const isPalindrome = function (s) {
   //Start Coding here
+  return (
+    s.toLowerCase().replace(/[^a-z]/g, "") ===
+    s
+      .toLowerCase()
+      .replace(/[^a-z]/g, "")
+      .split("")
+      .reverse()
+      .join("")
+  );
 };
 
 const result1 = isPalindrome("A man, a plan, a canal: Panama");
